@@ -49,7 +49,7 @@ reindexFields = [
 
 esasQueries = {
     'Personoplysning': 'Personoplysning?$filter=statecode%20eq%200%20and%20esas_rolle%20eq%20742980000&$select=esas_integration_id,esas_studieemail,esas_kaldenavn,esas_mobiltelefonnummer&$expand=esas_person($select=esas_navne_addressebeskyttet,Address1_Line1,Address1_Line2,esas_cpr_nummer,FirstName,LastName,ContactId,esas_postnummer_by_id)',
-    'Studieforloeb': 'Studieforloeb?$filter=statecode%20eq%200&$select=esas_afdeling_id,esas_studerende_id&$expand=esas_stamhold($select=esas_navn)',
+    'Studieforloeb': 'Studieforloeb?$filter=statuscode%20eq%20742980001%20and%20statecode%20eq%200%20and%20esas_stamhold_id%20ne%20null&$select=esas_afdeling_id,esas_studerende_id&$expand=esas_stamhold($select=esas_navn)',
     'Afdeling': 'Afdeling?$filter=statecode%20eq%200&$select=esas_navn',
     'Postnummer': 'Postnummer?$filter=statecode%20eq%200&$select=esas_by,esas_postnummer',
 }
